@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
-    <RouterView/>
-  </div>
+  <Index />
 </template>
 
 <script setup lang="ts">
+import Index from '../components/editor/Index.vue'
 </script>
 
 <style lang="scss" scoped>
+
 </style>
