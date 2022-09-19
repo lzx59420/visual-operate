@@ -1,9 +1,9 @@
 <template>
-  <Index />
+  <List />
 </template>
 
 <script setup lang="ts">
-import Index from '@/components/Home/Index.vue'
+import List from './List.vue'
 </script>
 
 <style lang="scss" scoped>

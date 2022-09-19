@@ -1,9 +1,9 @@
 <template>
-  <Index />
+  <PageIndex />
 </template>
 
 <script setup lang="ts">
-import Index from '../components/editor/Index.vue'
+import PageIndex from '@/components/editor/Index.vue'
 </script>
 
 <style lang="scss" scoped>

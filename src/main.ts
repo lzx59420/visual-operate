@@ -5,6 +5,7 @@ import 'ant-design-vue/dist/antd.css'
 
 import App from './App.vue'
 import router from './router'
+import FirstComp from './virtualLib/FirstComp.vue'
 
 import './assets/main.css'
 
@@ -12,5 +13,8 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router).use(Antd)
+
+
+app.component('FirstComp',FirstComp)
 
 app.mount('#app')
