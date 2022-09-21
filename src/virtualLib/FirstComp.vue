@@ -11,6 +11,7 @@ export interface FirstProp {
 }
 const prop= withDefaults(defineProps<FirstProp>(),{ text:'默认文案'})
 const { text } = toRefs(prop)
+console.log(1);
 
 defineExpose({
   text
