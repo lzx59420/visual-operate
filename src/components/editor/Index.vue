@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import ComponentLists  from "./ComponentLists/Index.vue";
-import Draw from "./draw.vue";
+import Draw from "./Draw/Index.vue";
 import From from "./From.vue";
 
 </script>
