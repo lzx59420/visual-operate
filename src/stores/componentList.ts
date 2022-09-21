@@ -7,9 +7,11 @@ interface componentCell {
 }
 
 export const useComponentListStore = defineStore('componentList', () => {
-  const componentList = reactive<componentCell[]>([
+  // 获取组件列表
+  const compList: componentCell[] = [
     { name: '', component: 'FirstComp', imgUrl: '/src/assets/transparent.png' },
-  ])
+  ]
+  const componentList = reactive<componentCell[]>(compList)
 
   return { componentList }
 })

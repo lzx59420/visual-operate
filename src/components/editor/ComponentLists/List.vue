@@ -7,11 +7,12 @@
 <script setup lang="ts">
 import { useComponentListStore } from '@/stores/componentList'
 import { useDrawingListStore } from '@/stores/drawingList'
+import { v4 as uuidv4 } from 'uuid'
 
 const { componentList } = useComponentListStore()
 const { pushComponent } = useDrawingListStore()
 const addComp = function (componentObj: { component: string; }){
-  pushComponent([{ props: { }, component: componentObj.component,option: {},id:'3' }])
+  pushComponent({ props: { }, component: componentObj.component,option: {},id: uuidv4() })
 }
 </script>
 

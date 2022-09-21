@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import { toRefs} from 'vue'
 export interface FirstProp {
-  text: string
+  text?: string
 }
 const prop= withDefaults(defineProps<FirstProp>(),{ text:'默认文案'})
 const { text } = toRefs(prop)

@@ -3,7 +3,7 @@ import { h,resolveComponent } from 'vue'
 import { useDrawingListStore } from '@/stores/drawingList'
 
 export default {
-    setup(){
+    setup(){ 
       const { drawList,changeCurrentDraw } = useDrawingListStore()
       const FirstComp = resolveComponent('FirstComp')
       return ()=>drawList.map(item=>{

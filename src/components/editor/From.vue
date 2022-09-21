@@ -9,12 +9,12 @@ export default {
       const { changVal } = stores
       const { currentDraw } = storeToRefs(stores)
       const FirstComp = resolveComponent('FirstCompAttr')
+
       return ()=>{
-        return  h(FirstComp,{...currentDraw.value.props,onChange: function (propObj:Object)  {
-          console.log(propObj,'---');
-          changVal(propObj)
-        }
-      })}
+        return currentDraw.value 
+        ? h(FirstComp,{...currentDraw.value.props,onChange:  (propObj:Object)=> changVal(propObj)})
+        : h('div') 
+      }
     },
 }
 </script>
