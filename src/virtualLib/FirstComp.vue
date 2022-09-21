@@ -5,11 +5,15 @@
 </template>
 
 <script setup lang="ts">
+import { toRefs} from 'vue'
 export interface FirstProp {
-  text: String
+  text: string
 }
-const { text } = defineProps({
-  text: String
+const prop= withDefaults(defineProps<FirstProp>(),{ text:'默认文案'})
+const { text } = toRefs(prop)
+
+defineExpose({
+  text
 })
 </script>
 

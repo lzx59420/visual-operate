@@ -1,6 +1,6 @@
 <template>
   <div v-for="(componentObj,index) in componentList" :key="componentObj.component">
-    <img :src="componentObj.imgUrl" @click="addComp" class="img">
+    <img :src="componentObj.imgUrl" @click="addComp(componentObj)" class="img">
   </div>
 </template>
 
@@ -10,8 +10,8 @@ import { useDrawingListStore } from '@/stores/drawingList'
 
 const { componentList } = useComponentListStore()
 const { pushComponent } = useDrawingListStore()
-const addComp = function (){
-  pushComponent([{ props: {text:'文案'}, component: 'FirstComp', option: {},id:'1' }])
+const addComp = function (componentObj: { component: string; }){
+  pushComponent([{ props: { }, component: componentObj.component,option: {},id:'3' }])
 }
 </script>
 

@@ -13,15 +13,14 @@ interface currentCell {
 
 export const useDrawingListStore = defineStore('drawingList', () => {
   const drawList = reactive<drawCell[]>([
-    { props: {text:'文案'}, component: 'FirstComp', option: {},id:'1' },
-    { props: {text:'文案2'}, component: 'FirstComp', option: {},id:'2' }
+    { props: {}, component: 'FirstComp', option: {},id:'1' },
+    { props: {}, component: 'FirstComp', option: {},id:'2' }
   ])
   function pushComponent(listsArr: drawCell[]) {
     drawList.push(...listsArr) 
   }
   const id = ref('1')
   const currentDraw = computed(()=>drawList.find(item=>item.id === id.value) as drawCell) 
-  console.log(currentDraw.value?.props.text,'aaa');
   function changeCurrentDraw(chooseCell: drawCell) {
     id.value = chooseCell.id
   }

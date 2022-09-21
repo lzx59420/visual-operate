@@ -7,9 +7,9 @@
 <script setup lang="ts">
 import { ref,toRefs,watch } from 'vue'
 export interface FirstProp {
-  text: String
+  text?: string
 }
-const props= defineProps<FirstProp>()
+const props= withDefaults(defineProps<FirstProp>(),{ text: '默认文案' })
 const { text } = toRefs(props)
 const innetVal = ref(text.value)
 watch(text, () => {
